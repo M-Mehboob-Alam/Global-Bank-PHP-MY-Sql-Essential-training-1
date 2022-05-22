@@ -12,6 +12,7 @@ if($test == '404'){
 
 ?>
 <?php $page_title = 'Create Subject'; ?>
+//add new commit to directly github in new.php subjects folder
 <?php include(Shared_Path . '/staff_header.php'); ?>
 
 <div id="content">
