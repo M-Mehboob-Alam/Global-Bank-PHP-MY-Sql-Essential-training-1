@@ -12,7 +12,7 @@ if($test == '404'){
 
 ?>
 <?php $page_title = 'Create Subject'; ?>
-//add new commit to directly github in new.php subjects folder
+<!-- //add new commit to directly github in new.php subjects folder -->
 <?php include(Shared_Path . '/staff_header.php'); ?>
 
 <div id="content">
@@ -22,7 +22,7 @@ if($test == '404'){
   <div class="subject new">
     <h1>Create Subject</h1>
 
-    <form action="" method="post">
+    <form action="<?php echo url_for('/staff/subjects/create.php') ?>" method="post">
       <dl>
         <dt>Menu Name</dt>
         <dd><input type="text" name="menu_name" value="" /></dd>

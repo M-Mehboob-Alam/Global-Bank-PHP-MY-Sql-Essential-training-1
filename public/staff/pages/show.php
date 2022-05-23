@@ -1,17 +1,23 @@
 <?php require_once('../../../private/initialize.php'); ?>
-<?php 
 
-  $id = $_REQUEST['id'] ?? '1';
-  
-
+<?php
+// $id = isset($_GET['id']) ? $_GET['id'] : '1';
+$id = $_GET['id'] ?? '1'; // PHP > 7.0
 ?>
-<?php $tittle_name = 'show page'; ?>
+
+<?php $page_title = 'Show Page'; ?>
 <?php include(Shared_Path . '/staff_header.php'); ?>
 
-   <div id="content">
-     <a href="<?php echo url_for('/staff/pages/index.php'); ?>" class="back-link">&laquo; Back To List</a>
-      <div class="page show">
-        Page ID: <?php echo h($id);?>
-      </div>
-    </div>
-<?php echo include(Shared_Path . '/staff_footer.php'); ?>
+<div id="content">
+
+  <a class="back-link" href="<?php echo url_for('/staff/pages/index.php'); ?>">&laquo; Back to List</a>
+
+  <div class="page show">
+
+    Page ID: <?php echo h($id); ?>
+
+  </div>
+
+</div>
+
+<?php include(Shared_Path . '/staff_footer.php'); ?>
